@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Javascript</title>
+    <script>
+        // Function
+        function hello(){
+            let nama = "Rehanah Yulianti";
+            let obj = document.getElementById("hello");
+            obj.innerHTML = "Sekian Tugas Saya, " + ' ' + nama;
+            obj.style.background="yellow"
+        }
+
+        // FOR STATEMENT
+        let buahs = ["Mangga","Pepaya","Apel","Pisang"];
+        let i=0;
+        document.write("Jumlah buah : " + buahs.length);
+        for(i=0 ; i < buahs.length ; i++){
+            console.log("buah index ke - " + i + " adalah : " + buahs[i]);
+            document.write("<li>"+buahs[i] + "</li>");
+        }
+        document.write("<br/>");
+
+        // if conditional
+        let nilai = confirm ("Masukan pilihan anda");
+        if (nilai == true){
+            document.write ("Kamu Masuk Kedalam Halaman" + "<br/>");
+        }
+
+        // if else conditinal
+        let siswa1 = {
+            nama : "Rehanah Yulianti",
+            umur : 21,
+            berat : 40,
+            cetak : function(){
+                returnthis.nama + " usianya " + this.umur;
+            }
+        }
+        let status_berat;
+        if(siswa1.berat > 80){
+            status_berat = " Gemuk";
+        }else{
+            status_berat = " : Berat Kamu Ideal";
+        }
+        console.log(siswa1.nama + status_berat);
+        document.write("<br/>" + siswa1.nama + status_berat);
+
+        // Nested if 
+        let siswa2 = {
+            name : "Rehanah Yulianti",
+            usia : 21,
+            beratbd : 40,
+            cetak : function(){
+                returnthis.name + " usianya " + this.usia;
+            }
+        }
+        let status_beratbd;
+        if(siswa2.beratbd > 80){
+            status_beratbd = " Gemuk";
+        }else if(siswa2.beratbd < 25){
+            status_beratbd = " : Kurus";
+        }else if(siswa2.beratbd < 50){
+            status_beratbd = " : Relatif";
+        }else if(siswa2.beratbd > 100){
+            status_beratbd = " : Obesitas";
+        }else{
+            status_beratbd = " : Berat Kamu Ideal";
+        }
+        console.log(siswa2.name + status_beratbd);
+        document.write("<br/>" + siswa2.name + status_beratbd);
+
+        // Switch case
+        grade = prompt ("Masukan Grade Nilai Anda (A,B,C,D,E)")
+        switch (grade){
+            case 'A' : bobot_nilai = 10
+                break
+            case 'B' : bobot_nilai = 80
+                break
+            case 'C' : bobot_nilai = 70
+                break
+            case 'D' : bobot_nilai = 50
+                break
+            case 'E' : bobot_nilai = 30
+                break
+            default :
+            bobot_nilai=0
+        }
+        console.log("Bobot Nilai Anda = " + bobot_nilai);
+        document.write("<br/>" + "Bobot Nilai Anda = "+ bobot_nilai + "<br/>" );
+
+        // While
+        let angka = 1;
+        while(angka<=5){
+            console.log("Ini Angka Ke - " + angka);
+            document.write("<br/>"+"Ini Angka Ke - " + angka)
+            angka++
+        }
+
+        //Do While
+        let bilangan = 0;
+        do{
+            console.log("Ini Bilangan ke - " + bilangan);
+            document.write("<br/>" + "Ini Bilangan ke - " + bilangan);
+            bilangan++;
+        }while(bilangan < 5)
+    </script>
+</head>
+<body>
+    <br/>
+    <button onclick="hello()">Hello silahkan clik</button>
+    <br/>
+    <span id="hello"></span>
+</body>
+</html>
